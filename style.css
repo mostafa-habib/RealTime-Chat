@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+ margin: 0;
+ padding: 0;
+ box-sizing: border-box;
+ text-decoration: none;
+ font-family: 'poppins' ,sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f7f7f7;
+}
+
+.wrapper{
+    background-color: #fff;
+    width: 450px;
+    border-radius: 16px;
+    box-shadow: 0 0 120px 0 rgba(0,0,0,0.1),
+                0 32px 64px -48px rgba(0,0,0,0.5);
+}
+
+.form{
+    padding: 25px 30px;
+    
+}
+.form header{
+    font-weight: 600;
+    font-size: 25px;
+    padding-bottom: 10px;
+    border-bottom: 1px  solid #e6e6e6;
+}
+/* Form Styling */
+.form form{
+    margin: 20px auto;
+}
+.form form .error-txt{
+    background-color:#f8d7da;
+    color: #721c24;
+    text-align: center;
+    padding: 8px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    border: 1px solid #f5c6cb;
+    display: none;
+}
+.form form .name-details{
+    display: flex;
+}
+.form form .name-details .field:first-child{
+    margin-right: 10px;
+}
+.form form .name-details .field:last-child{
+    margin-left: 10px;
+}
+.form form .field{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+.form form .field i{
+    position: absolute;
+    right: 15px;
+    bottom: 13px;
+    color: #ccc;
+    cursor: pointer;
+}
+.form form .field i.active::before{
+    color: #333;
+    content: "\f070";
+}
+.form form .field label{
+    margin-bottom: 2px;
+}
+.form form .input input{
+    height: 40px;
+    width: 100%;
+    font-size: 16px;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+.form form .image input{
+    font-size: 17px;
+}
+.form form .btn input{
+    background-color: #333;
+    color: #fff;
+    font-size: 17px;
+    font-weight: 400;
+    border: none;
+    padding: 7px 0;
+    border-radius: 5px;
+    margin-top: 5px;
+    cursor: pointer;
+}
+.form .link{
+    text-align: center;
+    margin: 10px 0;
+    font-size: 17px;
+}
+.form .link a{
+    color: #333;
+}
+.form .link a:hover{
+    text-decoration: underline;
+}
+
+/* Styling Users List page */
+.users{
+   padding: 25px 30px; 
+}
+.users header ,
+.users-list a{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+:is(.users-list ,.users) .content{
+    display: flex;
+}
+.users header .content img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+:is(.users-list ,.users,.chat) .details{
+    color: #000;
+    margin-left: 15px ;
+    align-items: center;
+}
+:is(.users-list ,.users ,.chat) .details span{
+    font-size: 18px;
+    font-weight: 500;
+}
+.users header .btn{
+    background-color: #333;
+    padding: 7px 15px;
+    color: #fff;
+    font-size: 17px;
+    border-radius: 5px;
+
+}
+.users .search{
+    margin: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    
+}
+.users .search span{
+    font-size: 18px;
+}
+
+.users .search input{
+    position: absolute;
+    height: 42px;
+    width: calc(100% - 50px);
+    outline: none;
+    padding: 0 13px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all .3s ease;
+}
+.users .search input.active{
+    opacity: 1;
+    pointer-events: auto;
+}
+.users .search button{
+    width: 50px;
+    height: 42px;
+    border: none;
+    outline: none;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-size: 17px;
+    transition: all .2s ease;
+  
+}
+.users .search button.active{
+    background-color: #333;
+    color: #fff;
+}
+.users .search button.active i::before{
+    content: "\f00d";
+}
+
+
+/* Users List */
+.users-list{
+    max-height: 350px;
+    overflow-y: auto;
+}
+.users-list::-webkit-scrollbar{
+    width: 0px;
+}
+.users-list a{
+    padding-right: 15px;
+    margin-bottom: 15px;
+    border-bottom-color:#f1f1f1 ;
+}
+.users-list a:last-child{
+    border: none;
+}
+.users-list a .content img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.users-list a .content p{
+    color: #67676a;
+}
+.users-list a .status-dot{
+    font-size: 12px;
+    color: #468669;
+}
+/* use it in php to show status offline */
+.users-list a .status-dot.offline{
+    font-size: 12px;
+    color: #ccc;
+}
+
+/* Chat css */
+.chat header{
+    display: flex;
+    align-items: center;
+    padding: 18px 30px;
+}
+.chat header img{
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+}
+.chat header a{
+    margin-right: 10px;
+    color: #333;
+    font-size: 18px;
+}
+.chat-box::-webkit-scrollbar{
+    width: 0px;
+}
+
+.chat-box{
+    height: 400px;
+    background: #f7f7f7;
+    padding: 10px 30px 20px 10px;
+    box-shadow: inset 0 32px 32px 3px rgb(0 0 0 / 5%),
+    inset 0 -32px 32px -32px rgb(0 0 0 / 5%);
+    overflow-y: auto;
+}
+.chat-box .chat{
+    margin: 15px 0;
+}
+.chat-box .chat p{
+    word-wrap: break-word;
+    padding: 8px 16px;
+    box-shadow:0 0 32px rgb(0 0 0 / 8%),
+     0 16px 16px -16px rgb(0 0 0 / 10%);
+}
+.chat-box .outgoing{
+    display: flex;
+} 
+
+.outgoing .details{
+    max-width: calc(100% - 130px);
+    margin-left:auto ;
+}
+.chat-box .outgoing .details p{
+    background-color: #333;
+    color: #fff;
+    border-radius: 18px 18px 0 18px;
+} 
+.chat-box .incoming{
+    display: flex;
+    
+} 
+.chat-box .incoming .details p{
+    background-color: #fff;
+    color: #333;
+    border-radius: 18px 18px 18px 0px;
+} 
+.chat-box .incoming{
+    display: flex;
+    align-items: flex-end;
+}
+.incoming img{
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+}
+.incoming .details{
+    max-width: calc(100% - 130px);
+    margin-right:auto ;
+    margin-left: 10px;
+}
+.typing-area{
+    padding: 18px 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.typing-area input{
+    height: 45px;
+    width: calc(100% - 58px);
+    font-size: 17px;
+    padding: 0 13px;
+    outline: none;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+}
+.typing-area button{
+    width: 56px;
+    background: #333;
+    color: #fff;
+    font-size: 19px;
+    border: none;
+    outline: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media (max-width: 600px) {
+    .wrapper{
+        width: 330px;
+    }
+    .typing-area input{
+        font-size: 14px;
+    }
+
+}
+
+
+
+
+
+
+
+
