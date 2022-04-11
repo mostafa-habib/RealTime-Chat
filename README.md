@@ -1,4 +1,4 @@
-## [Amazon Clone](https://lnkd.in/gETbEEUK)
+## [Chat App](https://lnkd.in/gETbEEUK)
 
 - Views are on: https://lnkd.in/gETbEEUK <br/>
 
